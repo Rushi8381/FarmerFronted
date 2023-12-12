@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,500;0,600;0,700;1,300;1,500&display=swap');
+
+body{
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.formInput{
+  @apply outline-none px-4 py-2 rounded-md border text-sm focus:border-theme block w-full mt-2
+}
+
+.formLabel{
+  @apply text-themeText2 block
+}
+
+.navLink{
+  @apply px-2 relative pb-2
+}
+.navLink::after{
+  content: '';
+  @apply h-1 rounded-xl w-0 absolute bg-theme bottom-0 left-0 duration-300
+}
+
+.navLink:hover::after{
+  @apply w-full
+}
+
+
+.sidebar-links, .pending{
+  text-decoration: none;
+  color: #000;
+  padding: 0.5rem 1rem;
+  /* transition:all .1s ease-in-out; */
+}
+
+.active.sidebar-links{
+  color: #000;
+  /* transition:all .1s ease-in-out; */
+  @apply bg-theme text-white
+}
+
+.sidebar-links:hover{
+  @apply bg-theme text-white 
+}
+
+.navbar-links{
+  @apply text-themeText2 relative pb-2
+}
+
+.active.navbar-links{
+  @apply text-theme 
+}
+
+.navbar-links::after{
+  content: '';
+  width: 0%;
+  height: 3px;
+  @apply bg-theme absolute bottom-0 left-0  duration-300 rounded-xl
+}
+
+.navbar-links:hover::after{
+  width: 100%;
+}
+
+.ant-table-thead tr:first-child .ant-table-cell{
+  @apply bg-gray-100 py-2 text-black whitespace-nowrap
+}
+
+.ant-table-tbody .ant-table-row .ant-table-cell{
+  @apply py-2
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
